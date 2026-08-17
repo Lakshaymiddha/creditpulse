@@ -1,0 +1,49 @@
+{
+  "manifest_version": 3,
+  "name": "CreditPulse",
+  "version": "0.1.0",
+  "description": "Track credit card transactions, offers, milestones, and due dates for Indian credit cards",
+  "permissions": [
+    "identity",
+    "storage",
+    "alarms",
+    "notifications"
+  ],
+  "host_permissions": [
+    "https://gmail.googleapis.com/*",
+    "https://raw.githubusercontent.com/*",
+    "https://offers.smartbuy.hdfcbank.com/*",
+    "https://www.sbicard.com/*",
+    "https://www.icicibank.com/*",
+    "https://www.axisbank.com/*",
+    "https://www.kotak.com/*",
+    "https://www.americanexpress.com/*",
+    "https://www.rblbank.com/*",
+    "https://www.indusind.com/*",
+    "https://www.yesbank.in/*",
+    "https://www.idfcfirstbank.com/*"
+  ],
+  "oauth2": {
+    "client_id": "REPLACE_WITH_YOUR_GOOGLE_CLOUD_CLIENT_ID.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/gmail.readonly"
+    ]
+  },
+  "background": {
+    "service_worker": "src/background/service-worker.ts",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "src/popup/index.html",
+    "default_icon": {
+      "16": "src/assets/icons/icon-16.png",
+      "48": "src/assets/icons/icon-48.png",
+      "128": "src/assets/icons/icon-128.png"
+    }
+  },
+  "icons": {
+    "16": "src/assets/icons/icon-16.png",
+    "48": "src/assets/icons/icon-48.png",
+    "128": "src/assets/icons/icon-128.png"
+  }
+}
